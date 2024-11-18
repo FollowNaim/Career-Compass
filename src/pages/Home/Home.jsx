@@ -1,11 +1,21 @@
+import AboutUs from "@/components/about-us/AboutUs";
 import Hero from "@/components/hero/Hero";
 import Services from "@/components/our-services/Services";
+import Testimonials from "@/components/testimonials/Testimonials";
+import { Button } from "@/components/ui/button";
+import { useRef } from "react";
+import { useSwiper } from "swiper/react";
 
 function Home() {
+  const swiper = useSwiper();
+  const nextBtn = useRef(null);
+  const prevBtn = useRef(null);
   return (
     <div>
       <Hero />
+      <AboutUs />
       <Services />
+      <Testimonials />
     </div>
   );
 }
