@@ -1,7 +1,11 @@
+import defaultUser from "@/assets/default-user.png";
+import { AuthContext } from "@/provider/AuthProvider";
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "../ui/button";
 
 function Nav() {
+  const { user, handleLogout } = useContext(AuthContext);
   return (
     <div>
       <div className="container mx-auto flex justify-between items-center border-b border-border px-4 py-2">
@@ -21,9 +25,23 @@ function Nav() {
           </ul>
         </div>
         <div>
-          <NavLink to={"/"}>
-            <Button className="bg-primary">Login</Button>
-          </NavLink>
+          {user ? (
+            <div className="flex items-center gap-4 ">
+              <img
+                title={user?.displayName ? user?.displayName : "N/A"}
+                className="w-10 h-10 object-cover rounded-full"
+                src={user?.photoURL ? user?.photoURL : defaultUser}
+                alt=""
+              />
+              <Button onClick={handleLogout} className="bg-primary">
+                Log Out
+              </Button>
+            </div>
+          ) : (
+            <NavLink to={"/auth/signin"}>
+              <Button className="bg-primary">Login</Button>
+            </NavLink>
+          )}
         </div>
       </div>
     </div>

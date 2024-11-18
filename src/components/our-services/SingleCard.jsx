@@ -23,17 +23,18 @@ function SingleCard({ service }) {
     rating,
     image,
   } = service;
-  console.log(service);
   return (
     <Card className="">
       <CardHeader>
-        <div>
-          <img
-            className="h-40 rounded-md object-cover w-full"
-            src={image}
-            alt=""
-          />
-        </div>
+        <Link to={`/service/${id}`}>
+          <div>
+            <img
+              className="h-40 rounded-md object-cover w-full"
+              src={image}
+              alt=""
+            />
+          </div>
+        </Link>
       </CardHeader>
       <CardContent>
         <div>
