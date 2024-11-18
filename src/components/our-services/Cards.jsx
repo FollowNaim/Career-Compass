@@ -11,7 +11,7 @@ function Cards() {
   console.log(services);
   return (
     <div className="grid grid-cols-3 gap-6 mt-10">
-      {[...services].slice(0, 6).map((service) => (
+      {[...services].slice(6, 12).map((service) => (
         <SingleCard key={service.id} service={service} />
       ))}
     </div>

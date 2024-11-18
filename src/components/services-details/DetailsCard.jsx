@@ -1,7 +1,9 @@
 import { AiTwotoneDollarCircle } from "react-icons/ai";
 import { BiCategoryAlt } from "react-icons/bi";
 import { FaStarHalfStroke, FaUserGraduate } from "react-icons/fa6";
+import { GiSkills } from "react-icons/gi";
 import { IoMdTime } from "react-icons/io";
+import { MdDevices, MdEventAvailable } from "react-icons/md";
 import {
   Card,
   CardContent,
@@ -22,6 +24,9 @@ function DetailsCard({ data }) {
     brief_description,
     long_description,
     image,
+    platform,
+    skill_focus,
+    availability,
   } = data || {};
   return (
     <Card className="">
@@ -72,8 +77,23 @@ function DetailsCard({ data }) {
             </span>{" "}
             {rating}
           </div>
-          <div className="border-l border-t border-blue-600  p-4">
-            <span className="font-semibold ">Duration</span> : {duration}
+          <div className="border-l border-t border-blue-600 flex items-center gap-2 p-4">
+            <span className="font-semibold flex items-center gap-2">
+              <MdDevices /> Platform :
+            </span>{" "}
+            {platform}
+          </div>
+          <div className="p-4 border-t border-blue-600 flex items-center gap-2">
+            <span className="font-semibold flex items-center gap-2 min-w-fit">
+              <GiSkills /> Skill Focus :
+            </span>{" "}
+            <span className="">{skill_focus}</span>
+          </div>
+          <div className="border-l border-t border-blue-600 flex items-center gap-2 p-4">
+            <span className="font-semibold flex items-center gap-2">
+              <MdEventAvailable /> Availability :
+            </span>{" "}
+            {availability}
           </div>
         </div>
       </CardContent>

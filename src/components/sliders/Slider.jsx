@@ -6,8 +6,7 @@ function Slider({ title, bold, desc, imgUrl, btnText, btnIcon }) {
       <div className="container mx-auto w-full grid grid-cols-2 justify-center items-center pl-4 md:pl-8 my-8 gap-4 bg-muted">
         <div className="col-span-1 flex flex-col gap-4 items-start">
           <h2 className="text-5xl text-foreground leading-tight font-extrabold">
-            {title} <br />{" "}
-            <span className="text-primary text-blue-600">{bold}</span>
+            {title} <br /> <span className=" text-blue-600">{bold}</span>
           </h2>
           <p className="text-lg text-secondary-foreground">{desc}</p>
           <div className="mt-4 flex items-center gap-4">

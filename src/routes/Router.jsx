@@ -18,7 +18,7 @@ export const routes = createBrowserRouter([
           const res = await fetch("/data.json");
           const data = await res.json();
           const found = data.find((d) => d.id === params.id);
-          return found;
+          return { found, data };
         },
       },
     ],
