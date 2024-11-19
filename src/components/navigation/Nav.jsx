@@ -20,7 +20,7 @@ function Nav() {
               <NavLink to={"/"}>Home</NavLink>
             </li>
             <li>
-              <NavLink to={"/"}>My Profile</NavLink>
+              <NavLink to={"/my-profile"}>My Profile</NavLink>
             </li>
           </ul>
         </div>
@@ -28,9 +28,9 @@ function Nav() {
           {user ? (
             <div className="flex items-center gap-4 ">
               <img
-                title={user?.displayName ? user?.displayName : "N/A"}
+                title={user?.displayName ? user.displayName : "N/A"}
                 className="w-10 h-10 object-cover rounded-full"
-                src={user?.photoURL ? user?.photoURL : defaultUser}
+                src={user.photoURL ? user.photoURL : defaultUser}
                 alt=""
               />
               <Button onClick={handleLogout} className="bg-primary">

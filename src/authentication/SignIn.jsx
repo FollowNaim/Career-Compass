@@ -1,4 +1,4 @@
-import loginAnimation from "@/animation/loginAnimation.json";
+import loginAnimation from "@/animation/LoginAnimation.json";
 import SpinnerWhite from "@/components/loader/SpinnerWhite";
 import { Button } from "@/components/ui/button";
 import {

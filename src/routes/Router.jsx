@@ -1,10 +1,11 @@
-import SignIn from "@/authentication/Signin";
+import SignIn from "@/authentication/SignIn";
 import SignUp from "@/authentication/SignUp";
 import MainLayout from "@/layouts/Main-Layout/MainLayout";
 import Home from "@/pages/Home/Home";
 import ServiceDetails from "@/pages/service-details/ServiceDetails";
 import { createBrowserRouter } from "react-router-dom";
 import PrivateRoutes from "./PrivateRoutes";
+import MyProfile from "@/pages/my-profile/MyProfile";
 export const routes = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +36,14 @@ export const routes = createBrowserRouter([
       {
         path: "/auth/signup",
         element: <SignUp />,
+      },
+      {
+        path: "my-profile",
+        element: (
+          <PrivateRoutes>
+            <MyProfile />
+          </PrivateRoutes>
+        ),
       },
     ],
   },

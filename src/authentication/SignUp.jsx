@@ -11,7 +11,9 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { auth } from "@/firebase/firebase.config";
 import { AuthContext } from "@/provider/AuthProvider";
+import { updateProfile } from "firebase/auth";
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { FaGoogle } from "react-icons/fa";
@@ -21,18 +23,9 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 export default function SignUp() {
   const { handleRegister, handleGoogleLogin } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
-  const [isDisable, setIsDisable] = useState(true);
   const [totalScore, setTotalScore] = useState(0);
   const navigate = useNavigate();
   const { state } = useLocation();
-  const handleDisable = (score) => {
-    console.log(score);
-    if (score < 3) {
-      return;
-    } else {
-      setIsDisable(false);
-    }
-  };
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -60,11 +53,18 @@ export default function SignUp() {
     const form = e.target;
     const email = form.email.value;
     const pass = form.password.value;
+    const name = form.name.value;
+    const photo = form.photo.value;
     handleRegister(email, pass)
       .then(() => {
-        setLoading(false);
-        toast.success("signup successfull");
-        return navigate("/");
+        updateProfile(auth.currentUser, {
+          displayName: name,
+          photoURL: photo,
+        }).then(() => {
+          setLoading(false);
+          toast.success("signup successfull");
+          return navigate("/");
+        });
       })
       .catch((err) => {
         setLoading(false);

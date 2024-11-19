@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Card, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
 
 function SmallCards({ card }) {
   const {
@@ -22,11 +22,14 @@ function SmallCards({ card }) {
       <Link to={`/service/${id}`}>
         <CardHeader className="flex flex-row items-center gap-3">
           <img
-            className="w-20 h-20 object-cover rounded-full"
+            className="w-16 h-16 object-cover rounded-full"
             src={image}
             alt=""
           />
-          <CardTitle className="text-lg">{service_name}</CardTitle>
+          <div>
+            <CardTitle className="text-lg">{service_name}</CardTitle>
+            <CardDescription>{category}</CardDescription>
+          </div>
         </CardHeader>
       </Link>
     </Card>
