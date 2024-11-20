@@ -39,7 +39,7 @@ export default function SignUp() {
     handleGoogleLogin()
       .then(() => {
         setLoading(false);
-        toast.success("login successfull");
+        toast.success("Login successfull!");
         if (state) return navigate(state);
         return navigate("/");
       })
@@ -63,7 +63,7 @@ export default function SignUp() {
           photoURL: photo,
         }).then(() => {
           setLoading(false);
-          toast.success("signup successfull");
+          toast.success("Signup successfull!");
           return navigate("/");
         });
       })

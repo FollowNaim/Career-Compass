@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
+import toast from "react-hot-toast";
 
 function FeedBack({ id }) {
   const { handleComments } = useContext(dataContext);
@@ -17,6 +18,7 @@ function FeedBack({ id }) {
     const form = e.target;
     const textarea = form.textarea.value;
     handleComments(textarea, id);
+    toast.success("Thank you for your feedback!");
     form.reset();
   };
   return (

@@ -1,12 +1,14 @@
 import defaultUser from "@/assets/default-user.png";
 import logo from "@/assets/nav-logo.png";
 import { AuthContext } from "@/provider/AuthProvider";
-import { useContext } from "react";
+import { Squash as Hamburger } from "hamburger-react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "../ui/button";
 
 function Nav() {
   const { user, handleLogout } = useContext(AuthContext);
+  const [isOpen, setIsOpen] = useState(false);
   console.log(user);
   return (
     <div>
@@ -30,13 +32,33 @@ function Nav() {
             </li>
           </ul>
         </div>
-        <div>
+
+        <div
+          className={`transition-all ${
+            isOpen ? "translate-y-0" : "-translate-y-[990px]"
+          } duration-300 ease-in-out z-50 bg-black/90 text-white absolute left-0 w-full py-10 top-20 backdrop-blur-md
+        `}
+        >
+          <ul className="flex flex-col items-center gap-6 *:px-4">
+            <li>
+              <NavLink to={"/"}>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/my-profile"}>My Profile</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/online-booking"}>Online Booking</NavLink>
+            </li>
+          </ul>
+        </div>
+
+        <div className="flex items-center gap-2">
           {user ? (
             <div className="flex items-center gap-4 ">
               <img
                 title={user?.displayName ? user.displayName : "N/A"}
                 className="w-10 h-10 object-cover rounded-full"
-                src={user.photoURL ? `${user.photoURL}` : defaultUser}
+                src={user.photoURL ? user.photoURL : defaultUser}
                 alt=""
               />
               <Button onClick={handleLogout} className="bg-primary">
@@ -48,6 +70,9 @@ function Nav() {
               <Button className="bg-primary">Login</Button>
             </NavLink>
           )}
+          <div>
+            <Hamburger size={22} toggled={isOpen} toggle={setIsOpen} />
+          </div>
         </div>
       </div>
     </div>

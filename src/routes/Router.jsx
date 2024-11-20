@@ -35,7 +35,11 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/online-booking",
-        element: <OnlineBooking />,
+        element: (
+          <PrivateRoutes>
+            <OnlineBooking />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/auth/signin",

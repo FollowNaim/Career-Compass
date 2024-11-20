@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
@@ -25,7 +26,7 @@ function AboutUs() {
         <Card className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 border-blue-600">
           <div className="col-span-1">
             <img
-              className="w-full h-full object-cover rounded-t-lg md:rounded-l-lg"
+              className="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
               src={aboutUs}
               alt=""
             />
@@ -78,7 +79,9 @@ function AboutUs() {
                   </p>
                 </div>
               </div>
-              <Button className="mt-6">connect with us today!</Button>
+              <Link to={"/online-booking"}>
+                <Button className="mt-6">connect with us today!</Button>
+              </Link>
             </CardContent>
           </div>
         </Card>

@@ -4,12 +4,12 @@ function Footer() {
   return (
     <div className="bg-[#1A232D] text-background">
       <div className="container mx-auto pt-14">
-        <div className="text-center max-w-2xl mx-auto border-b border-border">
+        <div className="text-center max-w-2xl mx-auto border-b border-border/30 px-1">
           <h2 className="font-semibold text-3xl text-center text-background">
             <span className="text-blue-500">Next Move</span> : Your Career Path
             Starts Here
           </h2>
-          <p className="text-secondary/90 px-4 text-left pt-4 pb-5 ">
+          <p className="text-secondary/90 px-4 text-center pt-4 pb-5 ">
             We’re here to guide you at every step of your career journey with
             expert advice, valuable resources, and personalized support to help
             you achieve your professional goals.

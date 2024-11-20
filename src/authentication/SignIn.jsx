@@ -44,7 +44,7 @@ export default function SignIn() {
     handleLogin(email, pass)
       .then(() => {
         setLoading(false);
-        toast.success("login successfull");
+        toast.success("Login successfull!");
         if (state) return navigate(state);
         return navigate("/");
       })
@@ -57,7 +57,7 @@ export default function SignIn() {
     handleGoogleLogin()
       .then(() => {
         setLoading(false);
-        toast.success("login successfull");
+        toast.success("Login successfullz1");
         if (state) return navigate(state);
         return navigate("/");
       })

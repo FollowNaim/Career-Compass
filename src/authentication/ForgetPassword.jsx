@@ -56,7 +56,7 @@ export default function ForgetPassword() {
     handleGoogleLogin()
       .then(() => {
         setLoading(false);
-        toast.success("login successfull");
+        toast.success("Login successfull!");
         return navigate("/");
       })
       .catch((err) => {
