@@ -48,7 +48,7 @@ const Testimonials = ({ children }) => {
                   Feedback
                 </span>
               </h2>
-              <div className="hidden md:flex items-center justify-center lg:justify-start gap-10 pb-10 md:pb-0 md:pt-10">
+              <div className="hidden md:flex md:items-center justify-start lg:justify-start gap-10 pb-10 md:pb-0 md:pt-10">
                 <button
                   onClick={() => prevRef.current.click()}
                   id="slider-button-left"

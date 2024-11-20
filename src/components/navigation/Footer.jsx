@@ -15,7 +15,7 @@ function Footer() {
             you achieve your professional goals.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 md:justify-center md:items-center md:justify-items-center px-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 md:justify-center md:items-baseline md:justify-items-center px-4 gap-8">
           <div>
             <h3 className="mt-2 mb-4 font-medium text-lg ">About Us</h3>
             <ul className="text-background/70 flex flex-col gap-1 ">
@@ -38,12 +38,14 @@ function Footer() {
             <h3 className="mt-2 mb-4 font-medium text-lg ">Legal</h3>
             <ul className="text-background/70 flex flex-col gap-1 ">
               <li>Privacy Policy</li>
-              <li>Terms of Service</li>
+              <li>TOC - Terms of Service</li>
               <li>Refund Policy</li>
             </ul>
           </div>
           <div>
-            <h3 className="mt-2 mb-4 font-medium text-lg ">Follow US</h3>
+            <h3 className="mt-2 mb-4 font-medium text-lg ">
+              Follow US on Socials
+            </h3>
             <ul className="text-background/70  grid grid-cols-1 gap-2">
               <li className="flex items-center gap-2">
                 <FaFacebook className="text-xl text-blue-700" /> Facebook

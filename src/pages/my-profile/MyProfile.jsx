@@ -144,6 +144,7 @@ export default function MyProfile() {
                 defaultValue={user?.displayName}
               />
               <span
+                title="Update your name"
                 className="absolute top-8 right-2 cursor-pointer"
                 onClick={() => setIsDisable(!isDisable)}
               >

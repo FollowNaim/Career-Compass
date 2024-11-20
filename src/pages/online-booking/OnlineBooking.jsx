@@ -1,4 +1,5 @@
 import onlineBookImg from "@/animation/online-booking.json";
+import SEO from "@/components/seo/SEO";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -45,6 +46,7 @@ function OnlineBooking() {
   };
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center px-4">
+      <SEO title={"Online Booking"} />
       <div className="col-span-1">
         <form onSubmit={handleSubmit}>
           <Card className="mx-auto md:max-w-sm my-10">
