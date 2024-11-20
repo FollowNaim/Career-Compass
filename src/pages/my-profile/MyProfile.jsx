@@ -91,13 +91,13 @@ export default function MyProfile() {
     }
   }, [name]);
   return (
-    <div className="grid grid-cols-2 justify-center items-center my-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center my-10 px-4">
       <SEO title={"My Profile"} />
       <form
         onSubmit={handleSubmit}
         className="w-full mx-auto max-w-md col-span-1"
       >
-        <Card className="w-full max-w-md">
+        <Card className="w-full max-w-full md:max-w-md">
           <CardHeader className="space-y-1 text-center">
             <CardTitle className="text-2xl">My Profile</CardTitle>
             <CardDescription>
@@ -172,7 +172,7 @@ export default function MyProfile() {
           </CardFooter>
         </Card>
       </form>
-      <div className="col-span-1">
+      <div className="col-span-1 hidden md:grid">
         <Lottie options={defaultOptions} height={400} width={400}></Lottie>
       </div>
     </div>

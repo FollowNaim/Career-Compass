@@ -73,10 +73,10 @@ export default function SignUp() {
       });
   };
   return (
-    <div className="grid grid-cols-2 gap-4 justify-center items-center max-w-7xl mx-auto  ">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center max-w-7xl mx-auto  px-4">
       <SEO title={"Sign Up"} />
       <form onSubmit={handleSubmit}>
-        <Card className="mx-auto max-w-sm my-10 col-span-1">
+        <Card className="mx-auto md:max-w-sm my-10 col-span-1">
           <CardHeader>
             <CardTitle className="text-2xl">Sign Up</CardTitle>
             <CardDescription>
@@ -142,7 +142,7 @@ export default function SignUp() {
           </CardContent>
         </Card>
       </form>
-      <div className="col-span-1">
+      <div className="col-span-1 hidden md:grid">
         <Lottie width={400} height={400} options={defaultOptions}></Lottie>
       </div>
     </div>

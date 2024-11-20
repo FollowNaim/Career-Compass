@@ -11,7 +11,7 @@ function Nav() {
   return (
     <div>
       <div className="container mx-auto flex justify-between items-center border-b border-border px-4 py-2">
-        <div>
+        <div className="w-1/6 xl:w-1/12">
           <Link to={"/"}>
             {/* <h1 className="text-2xl font-bold">NextMove</h1> */}
             <img className="w-20" src={logo} alt="" />
@@ -26,7 +26,7 @@ function Nav() {
               <NavLink to={"/my-profile"}>My Profile</NavLink>
             </li>
             <li>
-              <NavLink to={"/my-profile"}>Online Booking</NavLink>
+              <NavLink to={"/online-booking"}>Online Booking</NavLink>
             </li>
           </ul>
         </div>

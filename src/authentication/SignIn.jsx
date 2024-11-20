@@ -67,10 +67,10 @@ export default function SignIn() {
       });
   };
   return (
-    <div className="grid grid-cols-2 gap-4 justify-center items-center max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center max-w-7xl mx-auto px-4">
       <SEO title={"Sign In"} />
       <form onSubmit={handleSubmit}>
-        <Card className="mx-auto max-w-sm my-10 col-span-1">
+        <Card className="mx-auto md:max-w-sm my-10 col-span-1">
           <CardHeader>
             <CardTitle className="text-2xl">Login</CardTitle>
             <CardDescription>
@@ -123,7 +123,7 @@ export default function SignIn() {
           </CardContent>
         </Card>
       </form>
-      <div className="col-span-1">
+      <div className="col-span-1 hidden md:grid">
         <Lottie width={300} height={300} options={defaultOptions}></Lottie>
       </div>
     </div>

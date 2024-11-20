@@ -5,6 +5,7 @@ import Error404 from "@/components/404/Error404";
 import MainLayout from "@/layouts/Main-Layout/MainLayout";
 import Home from "@/pages/Home/Home";
 import MyProfile from "@/pages/my-profile/MyProfile";
+import OnlineBooking from "@/pages/online-booking/OnlineBooking";
 import ServiceDetails from "@/pages/service-details/ServiceDetails";
 import { createBrowserRouter } from "react-router-dom";
 import PrivateRoutes from "./PrivateRoutes";
@@ -33,6 +34,10 @@ export const routes = createBrowserRouter([
         },
       },
       {
+        path: "/online-booking",
+        element: <OnlineBooking />,
+      },
+      {
         path: "/auth/signin",
         element: <SignIn />,
       },
@@ -45,7 +50,7 @@ export const routes = createBrowserRouter([
         element: <ForgetPassword />,
       },
       {
-        path: "my-profile",
+        path: "/my-profile",
         element: (
           <PrivateRoutes>
             <MyProfile />
