@@ -59,12 +59,15 @@ function Nav() {
         <div className="flex items-center gap-2">
           {user ? (
             <div className="flex items-center gap-4 ">
-              <img
-                title={user?.displayName ? user.displayName : "N/A"}
-                className="w-10 h-10 object-cover rounded-full"
-                src={userDP}
-                alt=""
-              />
+              <Link to={"/my-profile"}>
+                <img
+                  referrerPolicy="no-referrer"
+                  title={user?.displayName ? user.displayName : "N/A"}
+                  className="w-10 h-10 object-cover rounded-full"
+                  src={userDP}
+                  alt=""
+                />
+              </Link>
               <Button onClick={handleLogout} className="bg-primary">
                 Log Out
               </Button>
