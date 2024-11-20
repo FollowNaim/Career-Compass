@@ -4,6 +4,7 @@
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 import updateAnimation from "@/animation/update-profile.json";
+import SEO from "@/components/seo/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -91,6 +92,7 @@ export default function MyProfile() {
   }, [name]);
   return (
     <div className="grid grid-cols-2 justify-center items-center my-10">
+      <SEO title={"My Profile"} />
       <form
         onSubmit={handleSubmit}
         className="w-full mx-auto max-w-md col-span-1"
@@ -106,6 +108,7 @@ export default function MyProfile() {
             <div className="flex flex-col items-center gap-4">
               <Avatar className="h-20 w-20 border-2 border-primary">
                 <AvatarImage
+                  className="object-cover"
                   src={photo || user.photoURL}
                   alt="Profile Picture"
                 />

@@ -18,7 +18,7 @@ function SmallCards({ card }) {
     availability,
   } = card || {};
   return (
-    <Card>
+    <Card className="w-full">
       <Link to={`/service/${id}`}>
         <CardHeader className="flex flex-row items-center gap-3">
           <img

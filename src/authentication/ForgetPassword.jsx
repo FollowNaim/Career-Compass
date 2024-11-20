@@ -1,4 +1,4 @@
-import loginAnimation from "@/animation/LoginAnimation.json";
+import forgetAnimation from "@/animation/forget-password.json";
 import SpinnerWhite from "@/components/loader/SpinnerWhite";
 import SEO from "@/components/seo/Seo";
 import { Button } from "@/components/ui/button";
@@ -11,54 +11,52 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { auth } from "@/firebase/firebase.config";
 import { AuthContext } from "@/provider/AuthProvider";
+import { sendPasswordResetEmail } from "firebase/auth";
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { FaGoogle } from "react-icons/fa";
 import Lottie from "react-lottie";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-export default function SignIn() {
-  const { handleLogin, handleGoogleLogin } = useContext(AuthContext);
+export default function ForgetPassword() {
   const [loading, setLoading] = useState(false);
   const { state } = useLocation();
-  const navigate = useNavigate();
   const [mail, setMail] = useState(null);
+  const { handleGoogleLogin } = useContext(AuthContext);
+  const navigate = useNavigate();
+  console.log(state);
 
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: loginAnimation,
+    animationData: forgetAnimation,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  console.log(mail);
   const handleSubmit = (e) => {
     setLoading(true);
     e.preventDefault();
-    const form = e.target;
-    const email = form.email.value;
-    setMail(email);
-    const pass = form.pass.value;
-    handleLogin(email, pass)
+    const email = e.target.email.value;
+    toast
+      .promise(sendPasswordResetEmail(auth, email), {
+        loading: "Sending",
+        success: <b>Verification email sent.</b>,
+        error: <b>Could not sent.</b>,
+      })
       .then(() => {
         setLoading(false);
-        toast.success("login successfull");
-        if (state) return navigate(state);
-        return navigate("/");
-      })
-      .catch((err) => {
-        setLoading(false);
-        toast.error(err.message);
+        window.open("https://mail.google.com/mail/");
       });
   };
+
   const handleGoogle = () => {
     handleGoogleLogin()
       .then(() => {
         setLoading(false);
         toast.success("login successfull");
-        if (state) return navigate(state);
         return navigate("/");
       })
       .catch((err) => {
@@ -66,15 +64,18 @@ export default function SignIn() {
         toast.error(err.message);
       });
   };
+
   return (
     <div className="grid grid-cols-2 gap-4 justify-center items-center max-w-7xl mx-auto">
-      <SEO title={"Sign In"} />
+      <SEO title={"Forget Password"} />
       <form onSubmit={handleSubmit}>
         <Card className="mx-auto max-w-sm my-10 col-span-1">
           <CardHeader>
-            <CardTitle className="text-2xl">Login</CardTitle>
+            <CardTitle className="text-2xl">
+              Forget Your Passwod ? 🤔{" "}
+            </CardTitle>
             <CardDescription>
-              Enter your email below to login to your account
+              Enter your email below to reset your password
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -82,7 +83,7 @@ export default function SignIn() {
               <div className="grid gap-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
-                  onChange={(e) => setMail(e.target.value)}
+                  defaultValue={state}
                   id="email"
                   type="email"
                   name="email"
@@ -90,28 +91,16 @@ export default function SignIn() {
                   required
                 />
               </div>
-              <div className="grid gap-2">
-                <div className="flex items-center">
-                  <Label htmlFor="password">Password</Label>
-                  <Link
-                    state={mail}
-                    to={"/auth/forget-password"}
-                    className="ml-auto inline-block text-sm underline"
-                  >
-                    Forgot your password?
-                  </Link>
-                </div>
-                <Input name="pass" id="password" type="password" required />
-              </div>
               <Button type="submit" className="w-full">
-                {loading ? <SpinnerWhite /> : "Login"}
+                {loading ? <SpinnerWhite /> : "Send Verification Mail"}
               </Button>
               <Button
+                type="button"
+                onClick={handleGoogle}
                 variant="outline"
                 className="w-full"
-                onClick={handleGoogle}
               >
-                <FaGoogle /> Login with Google
+                <FaGoogle /> or Login with google
               </Button>
             </div>
             <div className="mt-4 text-center text-sm">

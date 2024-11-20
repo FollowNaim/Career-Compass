@@ -1,5 +1,6 @@
 import signupanimation from "@/animation/SignupAnimation.json";
 import SpinnerWhite from "@/components/loader/SpinnerWhite";
+import SEO from "@/components/seo/Seo";
 import TestPassword from "@/components/test-password/TestPassword";
 import { Button } from "@/components/ui/button";
 import {
@@ -73,6 +74,7 @@ export default function SignUp() {
   };
   return (
     <div className="grid grid-cols-2 gap-4 justify-center items-center max-w-7xl mx-auto  ">
+      <SEO title={"Sign Up"} />
       <form onSubmit={handleSubmit}>
         <Card className="mx-auto max-w-sm my-10 col-span-1">
           <CardHeader>

@@ -171,5 +171,5 @@
 }
 .swiper-slide.swiper-slide-active > .swiper-slide h5 {
   color: blue !important;
-  font-size: 18px;
+  /* font-size: 18px; */
 }

@@ -9,13 +9,13 @@ function Footer() {
             <span className="text-blue-500">Next Move</span> : Your Career Path
             Starts Here
           </h2>
-          <p className="text-secondary/90 pt-4 pb-5 ">
+          <p className="text-secondary/90 px-4 text-left pt-4 pb-5 ">
             We’re here to guide you at every step of your career journey with
             expert advice, valuable resources, and personalized support to help
             you achieve your professional goals.
           </p>
         </div>
-        <div className="grid grid-cols-4 mt-10 justify-center items-center justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 md:justify-center md:items-center md:justify-items-center px-4 gap-8">
           <div>
             <h3 className="mt-2 mb-4 font-medium text-lg ">About Us</h3>
             <ul className="text-background/70 flex flex-col gap-1 ">

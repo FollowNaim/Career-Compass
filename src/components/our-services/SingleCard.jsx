@@ -24,12 +24,12 @@ function SingleCard({ service }) {
     image,
   } = service;
   return (
-    <Card className="">
+    <Card className="w-full">
       <CardHeader>
         <Link to={`/service/${id}`}>
           <div>
             <img
-              className="h-40 rounded-md object-cover w-full"
+              className="h-72 md:h-40 rounded-md object-cover w-full"
               src={image}
               alt=""
             />

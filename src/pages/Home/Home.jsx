@@ -1,8 +1,8 @@
 import AboutUs from "@/components/about-us/AboutUs";
 import Hero from "@/components/hero/Hero";
 import Services from "@/components/our-services/Services";
+import SEO from "@/components/seo/Seo";
 import Testimonials from "@/components/testimonials/Testimonials";
-import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 import { useSwiper } from "swiper/react";
 
@@ -12,6 +12,7 @@ function Home() {
   const prevBtn = useRef(null);
   return (
     <div>
+      <SEO title={"Home"} />
       <Hero />
       <AboutUs />
       <Services />

@@ -19,9 +19,11 @@ function AuthProvider({ children }) {
     return signInWithEmailAndPassword(auth, email, pass);
   };
   const handleRegister = (email, pass) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, pass);
   };
   const handleGoogleLogin = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
   const handleLogout = () => {
