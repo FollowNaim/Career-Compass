@@ -24,15 +24,36 @@ function Nav() {
           </Link>
         </div>
         <div className="hidden md:block">
-          <ul className="flex items-center *:px-4">
+          <ul id="navlinks" className="flex items-center">
             <li>
-              <NavLink to={"/"}>Home</NavLink>
+              <NavLink
+                className={
+                  "px-4 py-1 rounded-md transition-all duration-150 ease-in-out hover:text-blue-800"
+                }
+                to={"/"}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to={"/my-profile"}>My Profile</NavLink>
+              <NavLink
+                className={
+                  "px-4 py-1 rounded-md transition-all duration-150 ease-in-out hover:text-blue-800"
+                }
+                to={"/my-profile"}
+              >
+                My Profile
+              </NavLink>
             </li>
             <li>
-              <NavLink to={"/online-booking"}>Online Booking</NavLink>
+              <NavLink
+                className={
+                  "px-4 py-1 rounded-md transition-all duration-150 ease-in-out hover:text-blue-800"
+                }
+                to={"/online-booking"}
+              >
+                Online Booking
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -43,15 +64,36 @@ function Nav() {
           } duration-300 ease-in-out z-50 bg-black/90 text-white absolute left-0 w-full py-10 top-20 backdrop-blur-md
         `}
         >
-          <ul className="flex flex-col items-center gap-6 *:px-4">
+          <ul id="navlinks" className="flex flex-col items-center gap-6">
             <li>
-              <NavLink to={"/"}>Home</NavLink>
+              <NavLink
+                className={
+                  "px-4 py-1 rounded-md transition-all duration-150 ease-in-out hover:text-blue-800 border-white"
+                }
+                to={"/"}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to={"/my-profile"}>My Profile</NavLink>
+              <NavLink
+                className={
+                  "px-4 py-1 rounded-md transition-all duration-150 ease-in-out hover:text-blue-800 border-white"
+                }
+                to={"/my-profile"}
+              >
+                My Profile
+              </NavLink>
             </li>
             <li>
-              <NavLink to={"/online-booking"}>Online Booking</NavLink>
+              <NavLink
+                className={
+                  "px-4 py-1 rounded-md transition-all duration-150 ease-in-out hover:text-blue-800 border-white"
+                }
+                to={"/online-booking"}
+              >
+                Online Booking
+              </NavLink>
             </li>
           </ul>
         </div>

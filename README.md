@@ -115,4 +115,4 @@ Contributions are welcome! Fork this repository, make your changes, and submit a
 
 ---
 
-_Career Compass – Empowering Your Professional Journey._
+_Next Move – Empowering Your Professional Journey._

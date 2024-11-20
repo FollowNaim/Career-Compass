@@ -173,3 +173,7 @@
   color: blue !important;
   /* font-size: 18px; */
 }
+
+#navlinks a.active {
+  border: 1px dashed;
+}
