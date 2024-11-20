@@ -2,14 +2,18 @@ import defaultUser from "@/assets/default-user.png";
 import logo from "@/assets/nav-logo.png";
 import { AuthContext } from "@/provider/AuthProvider";
 import { Squash as Hamburger } from "hamburger-react";
-import { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Button } from "../ui/button";
 
 function Nav() {
   const { user, handleLogout } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
-  console.log(user);
+  const { pathname } = useLocation();
+  useEffect(() => {
+    if (isOpen) setIsOpen(false);
+  }, [pathname]);
+  let userDP = user?.photoURL ? user.photoURL : defaultUser;
   return (
     <div>
       <div className="container mx-auto flex justify-between items-center border-b border-border px-4 py-2">
@@ -58,7 +62,7 @@ function Nav() {
               <img
                 title={user?.displayName ? user.displayName : "N/A"}
                 className="w-10 h-10 object-cover rounded-full"
-                src={user.photoURL ? user.photoURL : defaultUser}
+                src={userDP}
                 alt=""
               />
               <Button onClick={handleLogout} className="bg-primary">
@@ -70,7 +74,7 @@ function Nav() {
               <Button className="bg-primary">Login</Button>
             </NavLink>
           )}
-          <div>
+          <div className="block md:hidden">
             <Hamburger size={22} toggled={isOpen} toggle={setIsOpen} />
           </div>
         </div>

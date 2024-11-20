@@ -1,6 +1,6 @@
 import Comments from "@/components/feedback/Comments";
 import FeedBack from "@/components/feedback/FeedBack";
-import SEO from "@/components/seo/Seo";
+import SEO from "@/components/seo/SEO";
 import DetailsCard from "@/components/services-details/DetailsCard";
 import SmallCards from "@/components/small-cards/SmallCards";
 import { useState } from "react";

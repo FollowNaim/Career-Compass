@@ -1,3 +1,5 @@
+import SectionHeading from "@/motion/SectionHeading";
+import SectionSubtitle from "@/motion/SectionSubtitle";
 import { useEffect, useRef, useState } from "react";
 import "swiper/css";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -19,13 +21,19 @@ const Testimonials = ({ children }) => {
   return (
     <>
       <div className="text-center max-w-2xl mx-auto mb-10">
-        <h2 className="font-semibold text-4xl text-primary text-center">
+        {/* <h2 className="font-semibold text-4xl text-primary text-center">
           See What Our <span className="text-blue-600">Clients Say</span>
         </h2>
         <p className="text-secondary-foreground py-4  ">
           Real stories from professionals who’ve trusted us to guide their
           career journey
-        </p>
+        </p> */}
+        <SectionHeading title={"See What Our"} highlight={"Clients Say"} />
+        <SectionSubtitle
+          subtitle={
+            "Real stories from professionals who’ve trusted us to guide their career journey"
+          }
+        />
       </div>
       <div className="container mx-auto grid grid-cols-1  md:grid-cols-12 mb-14">
         <div className="md:col-span-4">

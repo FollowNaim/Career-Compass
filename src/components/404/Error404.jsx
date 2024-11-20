@@ -1,6 +1,7 @@
 import error404 from "@/animation/404.json";
 import Lottie from "react-lottie";
 import { Link } from "react-router-dom";
+import SEO from "../seo/SEO";
 import { Button } from "../ui/button";
 
 function Error404() {
@@ -14,6 +15,7 @@ function Error404() {
   };
   return (
     <div className="container mx-auto flex flex-col min-h-screen justify-center items-center text-center">
+      <SEO title={"404 - Not Found"} />
       <div>
         <Lottie width={400} height={200} options={defaultOptions}></Lottie>
       </div>

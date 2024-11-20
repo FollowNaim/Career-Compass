@@ -1,6 +1,6 @@
 import signupanimation from "@/animation/SignupAnimation.json";
 import SpinnerWhite from "@/components/loader/SpinnerWhite";
-import SEO from "@/components/seo/Seo";
+import SEO from "@/components/seo/SEO";
 import TestPassword from "@/components/test-password/TestPassword";
 import { Button } from "@/components/ui/button";
 import {

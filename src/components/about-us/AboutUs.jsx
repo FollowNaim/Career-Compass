@@ -1,5 +1,8 @@
 import aboutUs from "@/assets/about-us.jpg";
 import verify from "@/assets/verify.png";
+import SectionHeading from "@/motion/SectionHeading";
+import SectionSubtitle from "@/motion/SectionSubtitle";
+import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import {
   Card,
@@ -8,21 +11,27 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
     <div className="mt-10 container mx-auto px-4">
       <div>
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="font-semibold text-4xl text-primary text-center">
+          {/* <h2 className="font-semibold text-4xl text-primary text-center">
             Who We Are
           </h2>
           <p className="text-secondary-foreground py-4  ">
             Explore our tailored services designed to guide you at every step of
             your professional path.
-          </p>
+          </p> */}
+          <SectionHeading title={"Who We Are"} />
+          <SectionSubtitle
+            subtitle={
+              "Explore our tailored services designed to guide you at every step of your professional path."
+            }
+          />
         </div>
+
         <Card className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 border-blue-600">
           <div className="col-span-1">
             <img

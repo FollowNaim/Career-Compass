@@ -1,6 +1,6 @@
 import loginAnimation from "@/animation/LoginAnimation.json";
 import SpinnerWhite from "@/components/loader/SpinnerWhite";
-import SEO from "@/components/seo/Seo";
+import SEO from "@/components/seo/SEO";
 import { Button } from "@/components/ui/button";
 import {
   Card,
