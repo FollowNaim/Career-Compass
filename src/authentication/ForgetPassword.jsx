@@ -26,7 +26,6 @@ export default function ForgetPassword() {
   const [mail, setMail] = useState(null);
   const { handleGoogleLogin } = useContext(AuthContext);
   const navigate = useNavigate();
-  console.log(state);
 
   const defaultOptions = {
     loop: true,

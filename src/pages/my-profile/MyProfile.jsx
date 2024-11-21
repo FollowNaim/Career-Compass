@@ -39,7 +39,6 @@ export default function MyProfile() {
     setLoading(true);
     const form = e.target;
     const name = form.name.value;
-    console.log(name, user?.displayName, name === user?.displayName);
 
     toast
       .promise(

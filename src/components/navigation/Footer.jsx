@@ -38,7 +38,7 @@ function Footer() {
             <h3 className="mt-2 mb-4 font-medium text-lg ">Legal</h3>
             <ul className="text-background/70 flex flex-col gap-1 ">
               <li>Privacy Policy</li>
-              <li>TOC - Terms of Service</li>
+              <li>T&C - Terms and Conditions</li>
               <li>Refund Policy</li>
             </ul>
           </div>

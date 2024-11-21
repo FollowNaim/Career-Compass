@@ -27,7 +27,6 @@ function TestPassword({ setTotalScore }) {
     };
     const x = calculateStrength();
     setScore(x);
-    console.log(score);
   }, [password]);
   useEffect(() => {
     setTotalScore(score.score);

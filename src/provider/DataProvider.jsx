@@ -9,9 +9,7 @@ function DataProvider({ children }) {
       .then((data) => setData(data));
   }, []);
   const handleComments = (comment, id) => {
-    console.log(comment, id);
     setComments([...comments, { comment, id }]);
-    console.log(comments);
   };
   const dataInfo = {
     data,

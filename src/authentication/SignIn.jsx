@@ -33,7 +33,6 @@ export default function SignIn() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  console.log(mail);
   const handleSubmit = (e) => {
     setLoading(true);
     e.preventDefault();

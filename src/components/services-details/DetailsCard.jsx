@@ -63,7 +63,7 @@ function DetailsCard({ data }) {
             <span className="font-semibold flex items-center gap-2">
               <AiTwotoneDollarCircle /> Price :
             </span>{" "}
-            {price}
+            $ {price}
           </div>
           <div className="md:border-l border-dashed md:border-solid border-t border-blue-600 flex items-center gap-2 p-4">
             <span className="font-semibold flex items-center gap-2">

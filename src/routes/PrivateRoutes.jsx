@@ -6,7 +6,6 @@ import { Navigate, useLocation } from "react-router-dom";
 function PrivateRoutes({ children }) {
   const { user, loading } = useContext(AuthContext);
   const { pathname } = useLocation();
-  console.log(location);
   if (loading) return <Spinner />;
   if (!user) return <Navigate state={pathname} to={"/auth/signin"} />;
   return <div>{children}</div>;

@@ -8,7 +8,6 @@ function Comments({ id }) {
   const { user } = useContext(AuthContext);
   const { comments } = useContext(dataContext);
   const filtered = comments.filter((c) => c.id === id);
-  console.log(filtered);
   return (
     <Card className="shadow-none rounded-none border-y-2 border-dashed mt-10">
       <CardHeader>
@@ -22,7 +21,7 @@ function Comments({ id }) {
             <li key={i} className="border-b border-dashed pb-4">
               <div className="flex items-center gap-3">
                 <img
-                  className="w-10 h-10 rounded-full"
+                  className="w-10 object-cover h-10 rounded-full"
                   src={user?.photoURL || userPhoto}
                   alt=""
                 />
