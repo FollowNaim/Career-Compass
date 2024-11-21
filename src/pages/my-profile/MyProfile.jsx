@@ -58,7 +58,10 @@ export default function MyProfile() {
         setSubmitDisable(true);
         setLoading(false);
       })
-      .catch((err) => toast.error(err.message));
+      .catch((err) => {
+        setLoading(false);
+        toast.error(err.message);
+      });
   };
 
   const handleUpload = async (e) => {

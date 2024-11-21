@@ -48,10 +48,12 @@ export default function ForgetPassword() {
       .then(() => {
         setLoading(false);
         window.open("https://mail.google.com/mail/");
-      });
+      })
+      .catch(() => setLoading(false));
   };
 
   const handleGoogle = () => {
+    setLoading(true);
     handleGoogleLogin()
       .then(() => {
         setLoading(false);

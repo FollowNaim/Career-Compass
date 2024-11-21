@@ -53,10 +53,11 @@ export default function SignIn() {
       });
   };
   const handleGoogle = () => {
+    setLoading(true);
     handleGoogleLogin()
       .then(() => {
         setLoading(false);
-        toast.success("Login successfullz1");
+        toast.success("Login successfull!");
         if (state) return navigate(state);
         return navigate("/");
       })
