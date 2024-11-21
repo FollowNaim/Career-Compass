@@ -5,10 +5,13 @@ import { Squash as Hamburger } from "hamburger-react";
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Button } from "../ui/button";
+import Toggler from "./Toggler";
 
 function Nav() {
   const { user, handleLogout } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
+  const [isToggle, setIsToggle] = useState(false);
+
   const { pathname } = useLocation();
   useEffect(() => {
     if (isOpen) setIsOpen(false);
@@ -58,7 +61,7 @@ function Nav() {
           </ul>
         </div>
 
-        <div
+        {/* <div
           className={`transition-all ${
             isOpen ? "translate-y-0" : "-translate-y-[990px]"
           } duration-300 ease-in-out z-50 bg-black/90 text-white absolute left-0 w-full py-10 top-20 backdrop-blur-md
@@ -96,7 +99,7 @@ function Nav() {
               </NavLink>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         <div className="flex items-center gap-2">
           {user ? (
@@ -121,6 +124,9 @@ function Nav() {
           )}
           <div className="block md:hidden">
             <Hamburger size={22} toggled={isOpen} toggle={setIsOpen} />
+            <div className="absolute">
+              <Toggler open={isOpen} onOpenChange={setIsOpen} />
+            </div>
           </div>
         </div>
       </div>

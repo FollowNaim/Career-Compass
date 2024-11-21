@@ -1,4 +1,5 @@
 import { FaFacebook, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -19,27 +20,52 @@ function Footer() {
           <div>
             <h3 className="mt-2 mb-4 font-medium text-lg ">About Us</h3>
             <ul className="text-background/70 flex flex-col gap-1 ">
-              <li>Who We Are</li>
-              <li>Our Mission & Values</li>
-              <li>Meet Our Team</li>
-              <li>Meet Our Team</li>
+              <Link className="hover:text-white" to={"/auth/signin"}>
+                <li>Who We Are</li>
+              </Link>
+              <Link className="hover:text-white" to={"/auth/signin"}>
+                <li>Our Mission & Values</li>
+              </Link>
+              <Link className="hover:text-white" to={"/auth/signin"}>
+                <li>Meet Our Team</li>
+              </Link>
+              <Link className="hover:text-white" to={"/auth/signin"}>
+                <li>Testimonials</li>
+              </Link>
             </ul>
           </div>
           <div>
             <h3 className="mt-2 mb-4 font-medium text-lg ">Resources</h3>
             <ul className="text-background/70 flex flex-col gap-1 ">
-              <li>Blog</li>
-              <li>Career Advice Articles</li>
-              <li>Free Webinars</li>
-              <li>Job Search Tips</li>
+              <Link className="hover:text-white" to={"/auth/signin"}>
+                <li>Blog</li>
+              </Link>
+              <Link className="hover:text-white" to={"/auth/signin"}>
+                <li>Career Advice Articles</li>
+              </Link>
+              <Link className="hover:text-white" to={"/auth/signin"}>
+                <li>Free Webinars</li>
+              </Link>
+              <Link className="hover:text-white" to={"/auth/signin"}>
+                <li>Job Search Tips</li>
+              </Link>
             </ul>
           </div>
           <div>
             <h3 className="mt-2 mb-4 font-medium text-lg ">Legal</h3>
             <ul className="text-background/70 flex flex-col gap-1 ">
-              <li>Privacy Policy</li>
-              <li>T&C - Terms and Conditions</li>
-              <li>Refund Policy</li>
+              <Link className="hover:text-white" to={"/auth/signin"}>
+                <li>Privacy Policy</li>
+              </Link>
+              <Link className="hover:text-white" to={"/auth/signin"}>
+                <li>T&C - Terms and Conditions</li>
+              </Link>
+              <Link className="hover:text-white" to={"/auth/signin"}>
+                <li>Refund Policy</li>
+              </Link>
+              <Link className="hover:text-white" to={"/auth/signin"}>
+                <li>Cookie Policy</li>
+              </Link>
             </ul>
           </div>
           <div>
@@ -47,18 +73,26 @@ function Footer() {
               Follow US on Socials
             </h3>
             <ul className="text-background/70  grid grid-cols-1 gap-2">
-              <li className="flex items-center gap-2">
-                <FaFacebook className="text-xl text-blue-700" /> Facebook
-              </li>
-              <li className="flex items-center gap-2">
-                <FaYoutube className="text-xl text-red-500" /> Youtube
-              </li>
-              <li className="flex items-center gap-2">
-                <FaGithub className="text-xl text-white" /> Github
-              </li>
-              <li className="flex items-center gap-2">
-                <FaInstagram className="text-xl text-red-300" /> Youtube
-              </li>
+              <a target="_blank" href="https://facebook.com">
+                <li className="hover:text-white flex items-center gap-2">
+                  <FaFacebook className="text-xl text-blue-700" /> Facebook
+                </li>
+              </a>
+              <a target="_blank" href="https://youtube.com">
+                <li className="hover:text-white flex items-center gap-2">
+                  <FaYoutube className="text-xl text-red-500" /> Youtube
+                </li>
+              </a>
+              <a target="_blank" href="https://github.com">
+                <li className="hover:text-white flex items-center gap-2">
+                  <FaGithub className="text-xl text-white" /> Github
+                </li>
+              </a>
+              <a target="_blank" href="https://instagram.com">
+                <li className="hover:text-white flex items-center gap-2">
+                  <FaInstagram className="text-xl text-red-300" /> Youtube
+                </li>
+              </a>
             </ul>
           </div>
         </div>
