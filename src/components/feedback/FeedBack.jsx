@@ -26,7 +26,7 @@ function FeedBack({ id }) {
       <Card className="shadow-none border-blue-600 mt-10">
         <CardHeader>
           <CardTitle className="text-2xl">
-            Share Your <span className="text-blue-600">Valuable Feedback</span>
+            Share Your <span className="text-blue-600">Valuable Feedback!</span>
           </CardTitle>
           <CardDescription>
             We value your thoughts! Leave a comment or share your experience

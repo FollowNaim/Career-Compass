@@ -32,7 +32,11 @@ function DetailsCard({ data }) {
     <Card className="">
       <CardHeader>
         <div>
-          <img className="h-80 w-full object-cover" src={image} alt="" />
+          <img
+            className="h-80 rounded-md w-full object-cover"
+            src={image}
+            alt=""
+          />
         </div>
         <div className="py-4">
           <CardTitle className="py-2">

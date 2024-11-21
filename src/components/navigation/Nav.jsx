@@ -23,7 +23,7 @@ function Nav() {
         <div className="w-1/6 xl:w-1/12">
           <Link to={"/"}>
             {/* <h1 className="text-2xl font-bold">NextMove</h1> */}
-            <img className="w-20" src={logo} alt="" />
+            <img className="w-40 md:w-20" src={logo} alt="" />
           </Link>
         </div>
         <div className="hidden md:block">

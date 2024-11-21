@@ -32,7 +32,7 @@ function AboutUs() {
           />
         </div>
 
-        <Card className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 border-blue-600">
+        <Card className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6 border-blue-600">
           <div className="col-span-1">
             <img
               className="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
