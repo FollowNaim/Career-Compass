@@ -1,8 +1,8 @@
-# Next Move 🫂
+# Career Compass 🫂
 
 An interactive and responsive **Career Counseling Website** designed to guide users toward informed career decisions. Built with modern technologies like **React**, **React Router**, and **Firebase**, this platform offers seamless navigation, personalized advice, and dynamic services tailored to professional growth.
 
-## 🌐 [Live Site](https://nextmoves.vercel.app/)
+## 🌐 [Live Site](https://ccompass.vercel.app/)
 
 ---
 
@@ -115,4 +115,4 @@ Contributions are welcome! Fork this repository, make your changes, and submit a
 
 ---
 
-_Next Move – Empowering Your Professional Journey._
+_Career Compass – Empowering Your Professional Journey._

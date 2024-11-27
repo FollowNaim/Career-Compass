@@ -46,16 +46,16 @@ function AboutUs() {
                 Empowering Your Journey to Success
               </CardTitle>
               <CardDescription className="text-base mt-4">
-                At NextMove, we are dedicated to empowering individuals and
-                organizations with the tools, guidance, and strategies needed to
-                thrive in todays competitive world. Our mission is to bridge the
-                gap between ambition and achievement, offering tailored
-                solutions that cater to diverse needs. With a team of passionate
-                professionals and years of expertise, we specialize in career
-                counseling, personal development, and strategic planning.
-                Whether youre starting your career, navigating a transition, or
-                striving to elevate your potential, were here to guide you every
-                step of the way.
+                At Career Compass, we are dedicated to empowering individuals
+                and organizations with the tools, guidance, and strategies
+                needed to thrive in todays competitive world. Our mission is to
+                bridge the gap between ambition and achievement, offering
+                tailored solutions that cater to diverse needs. With a team of
+                passionate professionals and years of expertise, we specialize
+                in career counseling, personal development, and strategic
+                planning. Whether youre starting your career, navigating a
+                transition, or striving to elevate your potential, were here to
+                guide you every step of the way.
               </CardDescription>
             </CardHeader>
             <CardContent>

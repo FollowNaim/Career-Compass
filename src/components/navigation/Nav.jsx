@@ -1,5 +1,5 @@
 import defaultUser from "@/assets/default-user.png";
-import logo from "@/assets/nav-logo.png";
+import logo from "@/assets/nav-logo.jpg";
 import { AuthContext } from "@/provider/AuthProvider";
 import { Squash as Hamburger } from "hamburger-react";
 import { useContext, useEffect, useState } from "react";
@@ -23,7 +23,7 @@ function Nav() {
         <div className="w-1/6 xl:w-1/12">
           <Link to={"/"}>
             {/* <h1 className="text-2xl font-bold">NextMove</h1> */}
-            <img className="w-40 md:w-20" src={logo} alt="" />
+            <img className="w-48 md:w-20" src={logo} alt="" />
           </Link>
         </div>
         <div className="hidden md:block">
