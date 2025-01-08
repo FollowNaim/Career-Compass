@@ -2,7 +2,15 @@
 
 An interactive and responsive **Career Counseling Website** designed to guide users toward informed career decisions. Built with modern technologies like **React**, **React Router**, and **Firebase**, this platform offers seamless navigation, personalized advice, and dynamic services tailored to professional growth.
 
+---
+
 ## 🌐 [Live Site](https://ccompass.vercel.app/)
+
+---
+
+## Showcase
+
+<img src='https://i.ibb.co.com/1vDsfM0/01.jpg'/>
 
 ---
 
@@ -57,6 +65,59 @@ An interactive and responsive **Career Counseling Website** designed to guide us
 
 ---
 
+## Dependencies
+
+- **@radix-ui/react-avatar**: ^1.1.1 – A Radix UI component for displaying user avatars.
+- **@radix-ui/react-dialog**: ^1.1.2 – A Radix UI component for creating dialog modals.
+- **@radix-ui/react-label**: ^2.1.0 – A Radix UI label component for forms.
+- **@radix-ui/react-popover**: ^1.1.2 – A Radix UI component for creating popovers.
+- **@radix-ui/react-scroll-area**: ^1.2.1 – A Radix UI component for scrollable areas.
+- **@radix-ui/react-select**: ^2.1.2 – A Radix UI select dropdown component.
+- **@radix-ui/react-slot**: ^1.1.0 – A utility for passing dynamic components as slots.
+- **@radix-ui/react-toast**: ^1.2.2 – A Radix UI component for creating toast notifications.
+- **@tabler/icons-react**: ^3.22.0 – A library of Tabler icons for React.
+- **class-variance-authority**: ^0.7.0 – Utility for handling className variants in React.
+- **clsx**: ^2.1.1 – Utility for constructing `className` strings conditionally.
+- **cmdk**: ^1.0.0 – Command menu component for React.
+- **date-fns**: ^3.6.0 – Utility library for working with JavaScript dates.
+- **firebase**: ^11.0.2 – Google Firebase JavaScript SDK.
+- **framer-motion**: ^11.11.17 – Motion library for React animations.
+- **hamburger-react**: ^2.5.1 – A hamburger menu button component.
+- **lucide-react**: ^0.460.0 – React icons library with beautiful, consistent icons.
+- **react**: ^18.3.1 – A JavaScript library for building user interfaces.
+- **react-day-picker**: ^8.10.1 – A date picker component for React.
+- **react-dom**: ^18.3.1 – React package for working with the DOM.
+- **react-dropzone**: ^14.3.5 – A React component for handling file uploads via drag and drop.
+- **react-helmet-async**: ^2.0.5 – A library for managing document head tags asynchronously.
+- **react-hot-toast**: ^2.4.1 – Toast notification library for React.
+- **react-icons**: ^5.3.0 – Popular icon library for React.
+- **react-lottie**: ^1.2.7 – A React library for rendering Lottie animations.
+- **react-phone-number-input**: ^3.4.9 – A React component for inputting phone numbers.
+- **react-router-dom**: ^6.28.0 – Declarative routing for React applications.
+- **swiper**: ^11.1.14 – A modern mobile touch slider library.
+- **tailwind-merge**: ^2.5.4 – Utility for merging Tailwind CSS class strings.
+- **tailwindcss-animate**: ^1.0.7 – Animation utilities for Tailwind CSS.
+
+---
+
+## Dev Dependencies
+
+- **@eslint/js**: ^9.13.0 – ESLint's core JavaScript functionality.
+- **@types/react**: ^18.3.12 – TypeScript definitions for React.
+- **@types/react-dom**: ^18.3.1 – TypeScript definitions for React DOM.
+- **@vitejs/plugin-react**: ^4.3.3 – Vite plugin for React support.
+- **autoprefixer**: ^10.4.20 – PostCSS plugin for adding vendor prefixes automatically.
+- **eslint**: ^9.13.0 – A tool for identifying and fixing JavaScript code issues.
+- **eslint-plugin-react**: ^7.37.2 – ESLint plugin for React best practices.
+- **eslint-plugin-react-hooks**: ^5.0.0 – ESLint rules for React hooks.
+- **eslint-plugin-react-refresh**: ^0.4.14 – ESLint plugin for React Fast Refresh.
+- **globals**: ^15.11.0 – Global variable definitions for ESLint.
+- **postcss**: ^8.4.49 – A tool for transforming CSS with JavaScript plugins.
+- **tailwindcss**: ^3.4.15 – A utility-first CSS framework.
+- **vite**: ^5.4.10 – Next-generation frontend build tool.
+
+---
+
 ## 🔧 How to Run Locally
 
 1. **Clone the Repository**
@@ -90,7 +151,7 @@ npm run dev
 ```
 
 5. **Access the App**
-   - Open http://localhost:3000 in your browser.
+   - Open http://localhost:5173 in your browser.
 
 ---
 
