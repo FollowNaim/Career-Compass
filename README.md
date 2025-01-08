@@ -123,7 +123,7 @@ An interactive and responsive **Career Counseling Website** designed to guide us
 1. **Clone the Repository**
 
 ```bash
-   git clone https://github.com/your-username/career-compass.git
+   git clone https://github.com/follownaim/career-compass.git
    cd career-compass
 ```
 
